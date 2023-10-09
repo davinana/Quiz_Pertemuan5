@@ -74,7 +74,7 @@
     <script>
     function tampilHasil()
     {
-        // Mendapatkan nilai dari input dan pilihan
+        //Mendapatkan nilai dari input dan pilihan
         var nama = document.getElementById("nama").value;
         var alamatPemesan = document.getElementById("alamatPemesan").value;
         var jenisKopi = document.getElementById("jenisKopi").value;
@@ -85,19 +85,19 @@
             makananPelengkap.push(checkboxes[i].value);
         }
 
-        // Harga Kopi
+        //Harga Kopi
         var hargaKopi = 0;
         if (jenisKopi === "kopiarabika") {
             hargaKopi = 10000;
-        } else if (jenisKopi === "kopirobusta") {
+        }else if (jenisKopi === "kopirobusta") {
             hargaKopi = 15000;
-        } else if (jenisKopi === "kopiliberika") {
+        }else if (jenisKopi === "kopiliberika") {
             hargaKopi = 20000;
-        } else if (jenisKopi === "kopiekselsa") {
+        }else if (jenisKopi === "kopiekselsa") {
             hargaKopi = 25000;
         }
 
-        // Harga Makanan Pelengkap
+        //Harga Makanan Pelengkap
         var hargaMakananPelengkap = 0;
         for (var j = 0; j < makananPelengkap.length; j++) {
             if (makananPelengkap[j] === "Cake") {
@@ -109,17 +109,17 @@
             }
         }
 
-        // Menghitung total harga
+        //Menghitung total harga
         var totalHarga = hargaKopi + hargaMakananPelengkap;
 
-        // Menampilkan hasil
-        var hasilText = "Nama : " + nama + "<br>";
-        hasilText += "Alamat : " + alamatPemesan + "<br>";
-        hasilText += "Pesanan Jenis Kopi : " + jenisKopi + "<br>";
-        hasilText += "Ukuran : " + ukuran + "<br>";
-        hasilText += "Total : " + totalHarga + makananPelengkap;
+        //Menampilkan hasil
+        var hasil = "Nama : " + nama + "<br>";
+        hasil += "Alamat : " + alamatPemesan + "<br>";
+        hasil += "Pesanan Jenis Kopi : " + jenisKopi + "<br>";
+        hasil += "Ukuran : " + ukuran + "<br>";
+        hasil += "Total : " + totalHarga + "<br>";
 
-        document.getElementById("hasil").innerHTML = hasilText;
+        document.getElementById("hasil").innerHTML = hasil;
     }
     </script>
 </head>
